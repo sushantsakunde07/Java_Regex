@@ -8,5 +8,6 @@ public class UserRegistrationRegex {
         userOperator.lastName();
         userOperator.emailAddress();
         userOperator.mobileNumber();
+        userOperator.password();
     }
 }

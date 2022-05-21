@@ -1,5 +1,6 @@
 package com.bridgelabz;
 
+
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -25,7 +26,7 @@ public class UserOperator {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the last name");
         String lastName = sc.nextLine();
-        String regex = "^[A-Z][a-z]{2,}$";
+        String regex = "^[A-Z]{1}[a-z]{2,}$";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(lastName);
         boolean valid=matcher.matches();
@@ -66,6 +67,22 @@ public class UserOperator {
         }
         else{
             System.out.println("Your mobile number "+mobileNumber+" is Invalid");
+        }
+    }
+
+    public void password(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the password");
+        String password = sc.nextLine();
+        String regex = "^[0-9a-zA-z]{8,}+$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(password);
+        boolean valid=matcher.matches();
+        if (valid==true){
+            System.out.println("Your password "+password+" is Valid");
+        }
+        else{
+            System.out.println("Your password "+password+" is Invalid");
         }
     }
 }
