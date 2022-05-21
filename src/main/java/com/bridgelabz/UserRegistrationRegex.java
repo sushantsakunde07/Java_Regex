@@ -6,5 +6,6 @@ public class UserRegistrationRegex {
         UserOperator userOperator = new UserOperator();
         userOperator.firstName();
         userOperator.lastName();
+        userOperator.emailAddress();
     }
 }
