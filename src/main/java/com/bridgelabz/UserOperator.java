@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 public class UserOperator {
     public void firstName() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the first name");
+        System.out.println("Enter the first name ");
         String firstName = sc.nextLine();
         String regex = "^[A-Z][a-z]{2,}$";
         Pattern pattern = Pattern.compile(regex);
