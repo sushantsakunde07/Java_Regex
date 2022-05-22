@@ -65,19 +65,21 @@ public class UserOperator {
         }
     }
 
-    public void password() {
+    public void password(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the password");
         String password = sc.nextLine();
         // String regex = "^[0-9a-zA-Z]{8,}$";
-        String regex = "^(?=.*[A-Z])(?=.*[a-z]).{8,}$";
+        // String regex = "^(?=.*[A-Z])(?=.*[a-z]).{8,}$";
+        String regex = "^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8,}$";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(password);
-        boolean valid = matcher.matches();
-        if (valid == true) {
-            System.out.println("Your password " + password + " is Valid");
-        } else {
-            System.out.println("Your password " + password + " is Invalid");
+        boolean valid=matcher.matches();
+        if (valid==true){
+            System.out.println("Your password "+password+" is Valid");
+        }
+        else{
+            System.out.println("Your password "+password+" is Invalid");
         }
     }
 }
