@@ -71,7 +71,8 @@ public class UserOperator {
         String password = sc.nextLine();
         // String regex = "^[0-9a-zA-Z]{8,}$";
         // String regex = "^(?=.*[A-Z])(?=.*[a-z]).{8,}$";
-        String regex = "^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8,}$";
+        //String regex = "^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8,}$";
+        String regex =  "^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[@#$%!]).{8,}$";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(password);
         boolean valid=matcher.matches();
